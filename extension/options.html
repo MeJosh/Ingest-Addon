@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ingest Page Capture Options</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <h1>Ingest Page Capture</h1>
+      <form id="options-form">
+        <label for="endpoint-url">Capture endpoint</label>
+        <input
+          id="endpoint-url"
+          name="endpointUrl"
+          type="url"
+          required
+          placeholder="http://127.0.0.1:8765/capture"
+        >
+        <div class="actions">
+          <button type="submit">Save</button>
+          <button id="restore-default" type="button">Restore Default</button>
+        </div>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

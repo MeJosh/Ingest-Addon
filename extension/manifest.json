@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Ingest Page Capture",
+  "version": "0.1.0",
+  "description": "Send the active tab URL to a configurable ingest endpoint.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_title": "Capture this page",
+    "default_icon": {
+      "48": "icons/capture.svg"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+  "icons": {
+    "48": "icons/capture.svg"
+  },
+  "applications": {
+    "gecko": {
+      "id": "ingest-page-capture@example.local"
+    }
+  }
+}
